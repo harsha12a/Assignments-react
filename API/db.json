@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "a749",
+      "username": "red",
+      "password": "red",
+      "email": "red@gmail.com",
+      "contact": "123",
+      "profile": "https://red"
+    },
+    {
+      "id": "8910",
+      "username": "ravi",
+      "password": "ravi",
+      "email": "ravi@gmail.com",
+      "contact": "345",
+      "profile": "https://ravi"
+    },
+    {
+      "id": "42aa",
+      "username": "blue",
+      "password": "blue",
+      "email": "blue@gmail.com",
+      "contact": "345",
+      "profile": "https://blue"
+    },
+    {
+      "id": "cbf1",
+      "username": "black",
+      "password": "black",
+      "email": "black@gmail.com",
+      "contact": "1212",
+      "profile": "https://black"
+    }
+  ]
+}
