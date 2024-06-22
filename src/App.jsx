@@ -1,5 +1,5 @@
 import React from 'react'
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {createBrowserRouter,Navigate,RouterProvider} from 'react-router-dom'
 import RootLayout from './RootLayout';
 import Home from './components/home/Home'
 import Login from './components/login/Login'
@@ -7,6 +7,9 @@ import Register from './components/register/Register'
 import About from './components/about/About'
 import RoutingError from './components/RoutingError';
 import UserProfile from './components/user-profile/UserProfile';
+import Products from './components/Products/Products'
+import Cart from './components/Cart/Cart'
+import EditUser from './components/edit-user/EditUser';
 import './App.css'
 
 function App() {
@@ -33,8 +36,26 @@ function App() {
           element:<About/>
         },
         {
+          path:'edit-user',
+          element:<EditUser/>
+        },
+        {
           path:'user-profile',
-          element:<UserProfile/>
+          element:<UserProfile/>,
+          children:[
+            {
+              path:'products',
+              element:<Products/>,
+            },
+            {
+              path:'cart',
+              element:<Cart/>
+            },
+            {
+              path:'',
+              element:<Navigate to={'products'}/>
+            }
+          ]
         }
       ]
     }

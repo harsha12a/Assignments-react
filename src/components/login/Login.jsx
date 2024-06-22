@@ -7,10 +7,9 @@ import { useEffect } from 'react'
 function Login() {
   let navigate=useNavigate()
   let {register,handleSubmit,formState:{errors}}=useForm()
-  let {loginuser,stat}=useContext(UserLoginContext)
+  let {loginuser,stat,err}=useContext(UserLoginContext)
   function onuserlogin(obj){
     loginuser(obj)
-    console.log(stat);
   }
   useEffect(()=>{
     if(stat===true){
@@ -21,6 +20,9 @@ function Login() {
   return (
     <div>
       <h1 className='text-center'>Login</h1>
+            {
+              err?.length!==0&&<h2 className='text-danger text-center'>{err}</h2>
+            }
       <div className='col-11 col-sm-10 col-md-6 mx-auto'>
         <form action="" onSubmit={handleSubmit(onuserlogin)} className='mx-auto mt-5 bg-light p-3'>
             <div className="mb-3">

@@ -1,8 +1,9 @@
 import React from 'react'
 import { BiSolidHome } from "react-icons/bi";
 import { GiArchiveRegister } from "react-icons/gi";
+import { CiLogout } from "react-icons/ci";
 import { CiLogin } from "react-icons/ci";
-import { FcAbout } from "react-icons/fc";
+import { IoMdInformationCircle } from "react-icons/io";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { UserLoginContext } from '../../contexts/userLoginContext';
 import { useContext } from 'react';
@@ -19,9 +20,9 @@ function Header() {
           <li className='nav-item'><Link className='nav-link text-white' to={'register'}><GiArchiveRegister className='mr-1 fs-3 text-warning'/>Register</Link></li>
           {stat===false?(
           <li className='nav-item'><Link className='nav-link text-white' to={'login'}><CiLogin className='fs-3 text-warning'/>Login</Link></li>):(
-            <li><Link className='nav-link text-white' onClick={logoutuser} to={'login'}><GiArchiveRegister className='fs-3 text-warning'/>Logout</Link></li>
+            <li><Link className='nav-link text-white' onClick={logoutuser} to={'login'}><CiLogout className='fs-3 text-warning'/>Logout</Link></li>
           )}
-          <li className='nav-item'><Link className='nav-link text-white' to={'about'}><FcAbout className='fs-3 text-warning'/>About us</Link></li>
+          <li className='nav-item'><Link className='nav-link text-white' to={'about'}><IoMdInformationCircle className='fs-3 text-warning'/>About us</Link></li>
         </ul>
       </div>
     </div>
