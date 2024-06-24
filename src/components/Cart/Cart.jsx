@@ -6,12 +6,12 @@ function Cart() {
   let {curr}=useContext(UserLoginContext)
   let [cartitems,setcart]=useState([])
   async function getcart(){
-    let res=await fetch(`http://localhost:3000/user-cart?username=${curr?.username}`)
+    let res=await fetch(`https://users-api-4bbh.onrender.com/user-cart?username=${curr?.username}`)
     let data=await res.json()
     setcart(data)
   }
   async function deleteitem(prodid){
-    let res=await fetch(`http://localhost:3000/user-cart/${prodid}`,{method:"DELETE"})
+    let res=await fetch(`https://users-api-4bbh.onrender.com/user-cart/${prodid}`,{method:"DELETE"})
     console.log(res);
     getcart()
   }

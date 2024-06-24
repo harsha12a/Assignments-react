@@ -6,7 +6,7 @@ function UserLoginStore({children}) {
     let [err,seterr]=useState('')
     async function loginuser(obj){
         try{
-            let res=await fetch(`http://localhost:3000/users?username=${obj.username}`)
+            let res=await fetch(`https://users-api-4bbh.onrender.com/users?username=${obj.username}`)
             let users=await res.json()
             if(users.length===0||users[0].password!=obj.password){
                 console.log('invalid user');

@@ -8,7 +8,7 @@ function Register() {
   let navigate=useNavigate()
   async function handleform(obj){
     try{
-      let res=await fetch('http://localhost:3000/users',{
+      let res=await fetch('https://users-api-4bbh.onrender.com/users',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'

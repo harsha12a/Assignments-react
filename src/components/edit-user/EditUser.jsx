@@ -8,7 +8,7 @@ function EditUser() {
     let {register,handleSubmit,setValue,formState:{errors}}=useForm()
     let navigate=useNavigate()
     async function onsave(obj){
-        let res=await fetch(`http://localhost:3000/users/${curr.id}`,{
+        let res=await fetch(`https://users-api-4bbh.onrender.com/users/${curr.id}`,{
             method:"PUT",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(obj)

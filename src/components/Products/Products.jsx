@@ -5,7 +5,7 @@ import Product from '../Product/Product'
 function Products() {
   let [prods,setprod]=useState([])
   async function getproducts(){
-    let res=await fetch('http://localhost:3000/products')
+    let res=await fetch('https://users-api-4bbh.onrender.com/products')
     let data=await res.json()
     setprod(data)
   }

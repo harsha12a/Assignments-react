@@ -7,7 +7,7 @@ function Product(props) {
   let {curr}=useContext(UserLoginContext)
   async function addToCart(obj) {
     obj.username=curr?.username
-    let res=await fetch('http://localhost:3000/user-cart', {
+    let res=await fetch('https://users-api-4bbh.onrender.com/user-cart', {
       method:'POST',
       headers: {'Content-Type': 'application/json'},
       body:JSON.stringify(obj)
